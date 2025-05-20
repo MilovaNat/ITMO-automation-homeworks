@@ -12,17 +12,19 @@ print(difference_135(141, 5))
 print(difference_135(140, 5))
 
 def get_season_by_month_number(x) -> str:
+   if x < 1 or x > 30:
+       return 'Введен не номер месяца, необходим номер от 1 до 12'
    if x in range(3, 6):
        return 'Spring'
    elif x in range(6, 9):
        return 'Summer'
-   elif x in range(9, 11):
+   elif x in range(9, 12):
        return 'Autumn'
    else:
        return 'Winter'
 
 
-print(get_season_by_month_number(2))
+print(get_season_by_month_number(0))
 
 def all_gth_10(x, y, z) -> str:
     if x > 10 and y > 10 and z > 10:
